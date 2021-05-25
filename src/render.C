@@ -94,25 +94,24 @@ void volumeRender::compute_gradient(REAL* data, int z)
       normal = gradient + idx; 
 
       if (x==lxmin)
-	normal->u= (data[idx+1] - data[idx]);
+	      normal->u= (data[idx+1] - data[idx]);
       else if (x== lxmax)
-	normal->u= (data[idx] - data[idx-1]);
+	      normal->u= (data[idx] - data[idx-1]);
       else
-	normal->u= (data[idx+1] - data[idx-1]) / 2.0;
-	  
+        normal->u= (data[idx+1] - data[idx-1]) / 2.0;
       if (y==lymin)
-	normal->v= (data[idx+lxdim] - data[idx]);
+	      normal->v= (data[idx+lxdim] - data[idx]);
       else if (y==lymax)
-	normal->v= (data[idx] - data[idx-lxdim]);
+	      normal->v= (data[idx] - data[idx-lxdim]);
       else
-	normal->v= (data[idx+lxdim] - data[idx-lxdim]) / 2.0;
+	      normal->v= (data[idx+lxdim] - data[idx-lxdim]) / 2.0;
 
       if (z==lzmin)
-	normal->w= (data[idx+lxdimlydim] - data[idx]);
+	      normal->w= (data[idx+lxdimlydim] - data[idx]);
       else if (z== lzmax)
-	normal->w= (data[idx] - data[idx-lxdimlydim]);
+	      normal->w= (data[idx] - data[idx-lxdimlydim]);
       else
-	normal->w= (data[idx+lxdimlydim] - data[idx-lxdimlydim]) / 2.0;
+	      normal->w= (data[idx+lxdimlydim] - data[idx-lxdimlydim]) / 2.0;
 
       // Normalize the gradient, if necessary 
       Normalize(normal);
@@ -507,9 +506,9 @@ void volumeRender::out_to_image(char* filename)
   unsigned char* green = new unsigned char[udim*vdim]; 
   unsigned char* blue  = new unsigned char[udim*vdim]; 
 
-  for (int i=0; i<udim; i++)
-    for (int j=0; j<vdim; j++) {
-      int idx = j*udim+i; 
+  for (int i=umin; i<=umax; i++)     // loop over each pixel 
+    for (int j=vmin; j<=vmax; j++) {
+      int idx = i*udim+j; 
       pixel*p = image_index(image, i, j); 
       red[idx]   = (unsigned char) (p->bp.r); 
       green[idx] = (unsigned char) (p->bp.g); 
@@ -629,10 +628,10 @@ void volumeRender::render()
 	}
       }
       if (use_uniform&& step_count!=0) {
-	sumred   = (rgba[0]*alphalut[step_count-1]);
-	sumgreen   = (rgba[1]*alphalut[step_count-1]);
-	sumblue   = (rgba[2]*alphalut[step_count-1]);
-	sumalpha = alphalut[step_count-1]; 
+        sumred   = (rgba[0]*alphalut[step_count-1]);
+        sumgreen   = (rgba[1]*alphalut[step_count-1]);
+        sumblue   = (rgba[2]*alphalut[step_count-1]);
+        sumalpha = alphalut[step_count-1]; 
       }
       p = image_index(image,u,v);
       p->bp.r = (unsigned char)clamp(rint((double)(sumred*255.0)),0,255);

@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "render.C": "cpp",
+        "testmain.C": "cpp",
+        "image.C": "cpp",
+        "new": "cpp"
+    }
+}
