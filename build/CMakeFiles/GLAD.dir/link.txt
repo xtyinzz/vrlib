@@ -1,0 +1,2 @@
+/bin/x86_64-linux-gnu-ar qc libGLAD.a CMakeFiles/GLAD.dir/src/util/glad.c.o
+/bin/x86_64-linux-gnu-ranlib libGLAD.a

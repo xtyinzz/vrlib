@@ -1,0 +1,2 @@
+/bin/x86_64-linux-gnu-ar qc libVR.a CMakeFiles/VR.dir/src/vr/render.C.o
+/bin/x86_64-linux-gnu-ranlib libVR.a

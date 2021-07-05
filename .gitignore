@@ -33,3 +33,6 @@
 
 # Data folder
 test
+
+# legacy vrlib folder
+src_old

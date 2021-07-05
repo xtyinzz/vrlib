@@ -1,0 +1,6 @@
+/home/xtyinzz/repo/vrlib/build/CMakeFiles/edit_cache.dir
+/home/xtyinzz/repo/vrlib/build/CMakeFiles/testmain.dir
+/home/xtyinzz/repo/vrlib/build/CMakeFiles/vrlib.dir
+/home/xtyinzz/repo/vrlib/build/CMakeFiles/rebuild_cache.dir
+/home/xtyinzz/repo/vrlib/build/CMakeFiles/STB_IMAGE.dir
+/home/xtyinzz/repo/vrlib/build/CMakeFiles/GLAD.dir

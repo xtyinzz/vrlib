@@ -1,0 +1,3 @@
+./vrlib 300 300 ../test/delta.bin ../test/delta_cool_3.cmap 20 30 0 ../test/out.ppm
+
+./testmain 300 300 ../test/delta.bin ../test/delta_cool_3.cmap 20 30 0 ../test/out.ppm

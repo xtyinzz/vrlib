@@ -1,0 +1,2 @@
+/bin/x86_64-linux-gnu-ar qc libSTB_IMAGE.a CMakeFiles/STB_IMAGE.dir/src/util/stb_image.cpp.o
+/bin/x86_64-linux-gnu-ranlib libSTB_IMAGE.a
